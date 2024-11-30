@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<div class="transition-container">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Siddharth</title>
+    <link rel="stylesheet" href="style.css">
+    
+    
+</head>
+<nav class="navbar">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="research.html">Research Interests</a></li>
+    </ul>
+</nav>
+<script>
+    // Smooth Page Transition
+    document.addEventListener("DOMContentLoaded", () => {
+        const links = document.querySelectorAll("a"); // Select all links
+        links.forEach(link => {
+            link.addEventListener("click", (e) => {
+                if (link.href && link.href.startsWith(window.location.origin)) {
+                    e.preventDefault(); // Prevent default navigation
+                    const href = link.href;
+
+                    // Add fade-out effect
+                    document.body.classList.add("fade-out");
+                    setTimeout(() => {
+                        window.location.href = href; // Navigate after fade-out
+                    }, 800); // Match timeout with CSS animation duration
+                }
+            });
+        });
+    });
+</script>
+<body>
+    <div class="about-container">
+        <div class="profile-image">
+            <img src="USER.png.png" alt="Siddharth's Profile Picture">
+        </div>
+        <section class="about-me">
+        <div class="container">
+            <h1>About Me</h1>
+            <p>Hi, I’m Siddharth, a Computer Science student passionate about exploring the fascinating worlds of cryptography, cybersecurity, and quantum science. I’m deeply curious about how technology shapes our digital future, and I’m drawn to the challenge of designing secure systems and understanding the theoretical foundations that make them possible.</p>
+            
+            <p>My academic journey goes beyond my coursework—I’m constantly eager to dive into advanced topics like cryptographic theory, secure networks, and the mathematical principles behind computing. These areas not only challenge me but also inspire me to contribute meaningfully to the tech world.</p>
+            
+            <p>Outside of technology, I’m intrigued by history, geopolitics, and how technology interacts with society. These interests help me see the bigger picture and remind me of the responsibility that comes with innovation.</p>
+            
+            <p>Feel free to connect with me about technology, ideas, or just a good conversation. I believe in learning, growing, and making an impact in whatever I do.</p>
+            
+           
+            <p>Have fun Exploring my blogs and the essays on research topics which facinates me and I am hepy to talk and interact about academic topics or innovative projects </p>
+        
+            <p>                                                                                             ~(=^‥^)ノ</p>
+        </div>
+        </section>
+    </div>
+</body>
+</div>
+</html>

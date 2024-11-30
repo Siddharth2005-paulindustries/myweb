@@ -1,0 +1,31 @@
+{
+    "particles": {
+        "number": {
+            "value": 100,
+            "density": {
+                "enable": true,
+                "value_area": 800
+            }
+        },
+        "color": { "value": "#00ffab" },
+        "shape": {
+            "type": "circle",
+            "stroke": { "width": 0, "color": "#000000" }
+        },
+        "size": {
+            "value": 3,
+            "random": true
+        },
+        "move": {
+            "enable": true,
+            "speed": 3,
+            "direction": "none"
+        }
+    },
+    "interactivity": {
+        "events": {
+            "onhover": { "enable": true, "mode": "repulse" }
+        }
+    },
+    "retina_detect": true
+}

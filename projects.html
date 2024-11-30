@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<div class="transition-container">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // Smooth Page Transition
+        document.addEventListener("DOMContentLoaded", () => {
+            const links = document.querySelectorAll("a"); // Select all links
+            links.forEach(link => {
+                link.addEventListener("click", (e) => {
+                    if (link.href && link.href.startsWith(window.location.origin)) {
+                        e.preventDefault(); // Prevent default navigation
+                        const href = link.href;
+    
+                        // Add fade-out effect
+                        document.body.classList.add("fade-out");
+                        setTimeout(() => {
+                            window.location.href = href; // Navigate after fade-out
+                        }, 800); // Match timeout with CSS animation duration
+                    }
+                });
+            });
+        });
+    </script>
+    
+</head>
+<nav class="navbar">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="research.html">Research Interests</a></li>
+    </ul>
+</nav>
+
+<body>
+    <div id="particles-js"></div>
+    <div class="page-content">
+        <h1>My Projects</h1>
+        <p>Details about my projects will be listed here.</p>
+        <a href="index.html">Back to Home</a>
+    </div>
+    <script src="particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</div>
+</html>

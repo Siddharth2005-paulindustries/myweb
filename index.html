@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<div class="transition-container">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // Smooth Page Transition
+        document.addEventListener("DOMContentLoaded", () => {
+            const links = document.querySelectorAll("a"); // Select all links
+            links.forEach(link => {
+                link.addEventListener("click", (e) => {
+                    if (link.href && link.href.startsWith(window.location.origin)) {
+                        e.preventDefault(); // Prevent default navigation
+                        const href = link.href;
+    
+                        // Add fade-out effect
+                        document.body.classList.add("fade-out");
+                        setTimeout(() => {
+                            window.location.href = href; // Navigate after fade-out
+                        }, 800); // Match timeout with CSS animation duration
+                    }
+                });
+            });
+        });
+    </script>
+    
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <div class="main-content">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Explore my projects, blogs, research, and more!</p>
+        <nav>
+            <a href="about.html">About Me</a>
+            <a href="projects.html">Projects</a>
+            <a href="blogs.html">Blogs</a>
+            <a href="research.html">Research</a>
+        </nav>
+    </div>
+    <script src="particles.min.js"></script>
+    <script src="script.js"></script>
+    <script src="particles.min.js"></script>
+
+</body>
+</div>
+</html>
