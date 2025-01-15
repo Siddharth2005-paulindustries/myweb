@@ -308,7 +308,7 @@ body.fade-out .transition-container {
     z-index: 1; /* Bring it above the Particle.js canvas */
     padding: 50px;
     text-align: center;
-    color: #ffffff; /* Set text color to ensure visibility */
+    color: #8F00FF; /* Set text color to ensure visibility */
     background-color: rgba(0, 0, 0, 0.8); /* Optional: Add a semi-transparent background */
 }
 
